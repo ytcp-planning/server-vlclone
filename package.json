@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "npm run migrate && npm run build:src",
+    "build": "npm run build:src",
     "migrate": "node ./node_modules/db-migrate/bin/db-migrate up --config config/database.json --env dev",
     "build:src": "npx babel src --out-dir dist --copy-files --ignore node_modules,dist",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,6 +25,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dayjs": "^1.11.7",
+    "db-migrate": "^0.11.13",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "helmet": "^6.0.1",
@@ -37,6 +38,9 @@
     "sequelize": "^6.30.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/node": "^7.17.10",
+    "@babel/core": "^7.21.4",
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "babel-cli": "^6.26.0",
