@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "clean": "rd /s /q build && mkdir build",
+    "build-babel": "babel ./src -d ./build/src",
+    "build": "npm run clean && npm run build-babel",
+    "prod": "npm run build && node ./build/src/index.js",
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -39,7 +42,6 @@
     "@babel/node": "^7.17.10",
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
-    "babel-cli": "^6.26.0",
     "nodemon": "^2.0.21"
   }
 }
