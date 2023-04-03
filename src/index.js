@@ -40,6 +40,6 @@ app.listen(process.env.APP_PORT, async () => {
   console.log(`🚀 App listening on the port ${process.env.APP_PORT}`);
   console.log(`=================================`);
   console.log(
-    `Hi, I am running at http://${process.env.APP_HOST}:${process.env.APP_PORT}/`
+    `Hi, I am running at ${process.env.APP_HOST}:${process.env.APP_PORT}/`
   );
 });
