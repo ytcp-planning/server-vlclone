@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "clean": "rd /s /q build && mkdir build",
     "build-babel": "babel ./src -d ./build/src",
-    "build": "npm run compile && npm run bundle",
+    "build": "npm run bundle",
     "prod": "npm run build && node ./build/src/index.js",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/index.js"
   },
