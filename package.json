@@ -1,6 +1,6 @@
 {
   "name": "vlclone",
-  "version": "3",
+  "version": "1.0.2",
   "description": "vlclone",
   "main": "src/index.js",
   "scripts": {
