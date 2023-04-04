@@ -29,7 +29,7 @@ require("./models");
 app.use("/", AuthRoutes);
 app.use("/", MemberRouters);
 app.use("/",  ProductCategory);
-app.use("/",  Product);
+app.use("/",  Product); 
 // app.use("/", CourseRoutes);
 // app.use("/", LecturerRoutes);
 

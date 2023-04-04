@@ -13,11 +13,11 @@ const db = new Sequelize(
     port: 5432,
     logging: false,
     dialectOptions: {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false // this is needed if your database uses a self-signed SSL certificate
-      },
-      keepAlive: true
+      // ssl: {
+      //   require: true,
+      //   rejectUnauthorized: false // this is needed if your database uses a self-signed SSL certificate
+      // },
+      // keepAlive: true
     }
   }
 );
