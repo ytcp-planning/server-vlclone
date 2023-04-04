@@ -8,7 +8,7 @@
     "clean": "rd /s /q build && mkdir build",
     "build-babel": "babel ./src -d ./build/src",
     "build": "npm run build-babel && node src/index.js",
-    "prod": "npm run build && node ./build/src/index.js",
+    "prod": "npm run build-babel && cd build &&  node index.js",
     "dev": "nodemon --exec ./node_modules/.bin/babel-node ./src/index.js"
   },
   "repository": {
